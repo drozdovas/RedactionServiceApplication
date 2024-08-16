@@ -48,4 +48,11 @@ class RedactionControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string(expected));
     }
+
+    @Test
+    void testNoHandlerFoundException() throws Exception {
+        mockMvc.perform(get("/redaction"))
+                .andExpect(status().isNotFound())
+                .andExpect(content().string("Path not found: /redaction"));
+    }
 }

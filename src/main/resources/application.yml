@@ -8,3 +8,8 @@ redaction:
     - Snake
     - Dolphin
     - Mammal
+
+spring:
+  web:
+    resources:
+      add-mappings: false
