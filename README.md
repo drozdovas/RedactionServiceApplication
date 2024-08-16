@@ -9,7 +9,7 @@ Redaction Service is a simple Spring Boot application that provides a RESTful we
 - **Redaction of Specified Words**: Replace sensitive words in the input text with "REDACTED".
 - **Configurable Redaction List**: Customize the list of words to be redacted via configuration.
 - **Customizable Port**: The service can be configured to run on any port specified at runtime.
-- **Request Logging**: Logs every POST request with the original text before redaction.
+- **Request Logging**: Logs every POST request with the original text before redaction. Logs are saved to a file under the [root project folder]/logs.
 - **Custom 404 Handling**: Logs attempts to access undefined paths and returns a custom 404 message.
 
 ## Tech Stack
@@ -39,6 +39,9 @@ Content-Type: text/plain
 
 A dog, a monkey or a dolphin are all mammals.
 ```
+
+## Endpoints testing with Postman
+A Postman collection example is available under the root folder of the project. 
 
 ## Time scales
 Redaction Service took around 2 hours to complete.
